@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-All bout page ss
+All bout page SS
 ================
 Comming Soon....
 
