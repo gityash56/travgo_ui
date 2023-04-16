@@ -21,14 +21,16 @@ class IntroSState extends State<IntroS> with TickerProviderStateMixin {
           builder: (context) => RegisterScreen(),
         ),
       ),
+     
       onSkip: () => print('Skipping the intro slides'),
       //  footerBgColor: Color.fromARGB(255, 232, 229, 218),
 
-      footerBgColor: Colors.grey,  //  footer page color 
+      footerBgColor: Colors.white,  //  footer page color 
 
       activeDotColor: Colors.blue,   // scrool dot color
       footerRadius: 18.0,
       indicatorType: IndicatorType.CIRCLE,   // footer indicator
+      
       slides: [
         IntroScreen(
           headerPadding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
@@ -36,9 +38,11 @@ class IntroSState extends State<IntroS> with TickerProviderStateMixin {
           title: "Best travel destinations \n in the world",
 
           // imageAsset: 'assets/images/intro1.png',
-          header: Image.asset(
-            'assets/images/intro1.png',
-            fit: BoxFit.cover,
+          header: ClipRRect( borderRadius: const BorderRadius.only(bottomLeft: Radius.elliptical(260 , 40) , bottomRight: Radius.elliptical(260, 40)),
+            child: Image.asset(
+              'assets/images/intro1.png' , width: double.infinity,
+              fit: BoxFit.cover, 
+            ),
           ),
           description: 'Semper in cursus magna et eu varius nunc adipiscing.Elementum justo , laoreet id semiru forgive you.', 
           // textStyle: TextStyle(color: Colors.black,fontSize: 10),             // error in the code.
@@ -49,7 +53,7 @@ class IntroSState extends State<IntroS> with TickerProviderStateMixin {
           headerBgColor: Colors.white,
           // imageAsset: 'assets/images/intro2.png',
           header: Image.asset(
-            'assets/images/intro21.png',
+            'assets/images/intro21.png' , width: double.infinity,
             fit: BoxFit.cover,
           ),
           description: "Semper in cursus magna et eu varius nunc adipiscing.Elementum justo , laoreet id semiru forgive you.", 
@@ -60,7 +64,7 @@ class IntroSState extends State<IntroS> with TickerProviderStateMixin {
 
           // imageAsset: 'assets/images/intro3.png',
           header: Image.asset(
-            'assets/images/intro3.png',
+            'assets/images/intro3.png', width: double.infinity,
             fit: BoxFit.cover,
           ),
           description: "Semper in cursus magna et eu varius nunc adipiscing.Elementum justo , laoreet id semiru forgive you.",
