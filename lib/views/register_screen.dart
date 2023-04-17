@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:travgo_ui/views/create_account_screen.dart';
 import 'package:travgo_ui/views/welcome_screen.dart';
 import 'package:travgo_ui/widgets/baseRoute.dart';
 import 'package:get/get.dart';
 
 class RegisterScreen extends BaseRoute {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,17 +59,17 @@ class RegisterScreen extends BaseRoute {
                     ],
                   ),
                   // Divider(),
-                  Padding(  
-                    padding: const EdgeInsets.fromLTRB(15,15,15,1),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 15, 15, 1),
                     child: Container(
                       height: 70,
                       width: double.infinity,
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       child: ElevatedButton(
-                        onPressed: () { 
+                        onPressed: () {
                           // its work but we cant use.
                           // Navigator.of(context).push(MaterialPageRoute(builder: (context) => WelcomeScreen()  ),);
-                          Get.to(WelcomeScreen());  // Use getx to page navigate.
+                          Get.to(WelcomeScreen()); // Use getx to page navigate.
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
@@ -84,10 +84,15 @@ class RegisterScreen extends BaseRoute {
                   Padding(
                     padding: const EdgeInsets.only(left: 100),
                     child: Row(
-                      
                       children: [
-                         Text('Don\'t have an account ?', style: TextStyle(fontWeight: FontWeight.bold),),
-                        TextButton(onPressed: () {}, child: Text('Register'),),
+                        const Text(
+                          'Don\'t have an account ?',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text('Register'),
+                        ),
                       ],
                     ),
                   )
