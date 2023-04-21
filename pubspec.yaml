@@ -41,6 +41,7 @@ dependencies:
   appbar_animated: ^0.0.3
   sign_button: ^2.0.3
   text_divider: ^1.0.0
+  pinput: ^2.2.31
   # tinycolor: ^1.0.3
  
 
@@ -74,6 +75,7 @@ flutter:
     - assets/images/intro21.png
     - assets/images/intro3.png
     - assets/images/intro4.png
+    - assets/images/successfully.png
 
 
   #   - images/a_dot_ham.jpeg

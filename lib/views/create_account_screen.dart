@@ -25,7 +25,7 @@ class CreateAccountScreen extends BaseRoute {
             // foregroundDecoration: BoxDecoration(color: Colors.white , borderRadius: BorderRadius.circular(50)),
 
             child: const Padding(
-              padding: EdgeInsets.only( top: 120, left: 100),
+              padding: EdgeInsets.only(top: 120, left: 100),
               child: Text(
                 'Creaet account',
                 style: TextStyle(fontSize: 30, color: Colors.white),
@@ -78,7 +78,9 @@ class CreateAccountScreen extends BaseRoute {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: 'Enter your email address',
-                      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(22)),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white60),
+                          borderRadius: BorderRadius.circular(22)),
                     ),
                     validator: (value) {
                       if (value!.contains('@gmail.com') == false) {
@@ -121,14 +123,16 @@ class CreateAccountScreen extends BaseRoute {
           Container(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(50, 310, 50, 0),
-              child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                TextDivider.horizontal(
-                    text: const Text(
-                      'Or continue with',
-                    ),
-                    thickness: 2,
-                    color: Colors.black26),
-              ]),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextDivider.horizontal(
+                        text: const Text(
+                          'Or continue with',
+                        ),
+                        thickness: 2,
+                        color: Colors.black26),
+                  ]),
             ),
           ),
 
@@ -171,7 +175,9 @@ class CreateAccountScreen extends BaseRoute {
                   'Already have an account  ?',
                 ),
                 TextButton(
-                  onPressed: () {   Get.to(SignUpScreen());},
+                  onPressed: () {
+                    Get.to(SignUpScreen());
+                  },
                   child: Text('Login'),
                 ),
               ],

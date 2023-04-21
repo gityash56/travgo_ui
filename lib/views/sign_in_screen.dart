@@ -3,9 +3,10 @@ import 'package:get/get.dart';
 import 'package:sign_button/constants.dart';
 import 'package:sign_button/create_button.dart';
 import 'package:text_divider/text_divider.dart';
+import 'package:travgo_ui/views/select_language.dart';
 import 'package:travgo_ui/views/welcome_screen.dart';
 import 'package:travgo_ui/widgets/baseRoute.dart';
-
+import 'forgot_password_screen.dart';
 import 'create_account_screen.dart';
 
 class SignScreen extends BaseRoute {
@@ -131,7 +132,9 @@ class SignScreen extends BaseRoute {
                     onChanged: (value) {},
                   ),
                   trailing: TextButton(
-                    onPressed: () {},
+                    onPressed: () { 
+                        Get.to(ForgotPasswordScreen());
+                      },
                     child: const Text(
                       'Forgot Password',
                       style: TextStyle(color: Colors.red),
@@ -150,6 +153,7 @@ class SignScreen extends BaseRoute {
               child: ElevatedButton(
                 onPressed: () {
                   // page route
+                     Get.to(SelectLanguage());
                 },
                 style: ElevatedButton.styleFrom(
                   // backgroundColor: Color(0xf6f8fe),   E.X. =>  Hexa color code

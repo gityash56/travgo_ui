@@ -54,18 +54,20 @@ class WelcomeScreen extends BaseRoute {
               color: Colors.white,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(30, 0, 50, 50),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text('Email'),
-              ],
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(30, 0, 50, 50),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text('Email'),
+                ],
+              ),
             ),
           ),
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
             child: Column(
               children: [
                 Padding(
@@ -74,7 +76,7 @@ class WelcomeScreen extends BaseRoute {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: 'Enter your email address',
-                      border: OutlineInputBorder(borderSide: const BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(22)),
+                      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(22)),
                     ),
                     validator: (value) {
                       if (value!.contains('@gmail.com') == false) {
@@ -87,66 +89,74 @@ class WelcomeScreen extends BaseRoute {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 430, 20, 25),
-            child: Container(
-              height: 70,
-              width: double.infinity,
-              padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {
-                  // page route
-                  Get.to(SignScreen());
-                },
-                style: ElevatedButton.styleFrom(
-                  // backgroundColor: Color(0xf6f8fe),   E.X. =>  Hexa color code
-                  backgroundColor: Colors.blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(22),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 430, 20, 25),
+              child: Container(
+                height: 70,
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                child: ElevatedButton(
+                  onPressed: () {
+                    // page route
+                    Get.to(SignScreen());
+                  },
+                  style: ElevatedButton.styleFrom(
+                    // backgroundColor: Color(0xf6f8fe),   E.X. =>  Hexa color code
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(22),
+                    ),
                   ),
+                  child: Text('Continue with Email'),
                 ),
-                child: Text('Continue with Email'),
               ),
             ),
           ),
 
           //......... or continue with...........   left.
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(50, 310, 50, 0),
-            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              TextDivider.horizontal(
-                  text: const Text(
-                    'Or continue with',
-                  ),
-                  thickness: 2,
-                  color: Colors.black26),
-            ]),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(50, 310, 50, 0),
+              child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                TextDivider.horizontal(
+                    text: const Text(
+                      'Or continue with',
+                    ),
+                    thickness: 2,
+                    color: Colors.black26),
+              ]),
+            ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 540, 20, 25),
-            child: Container(
-                height: 70,
-                width: double.infinity,
-                padding: EdgeInsets.all(10),
-                child: SignInButton(
-                    buttonType: ButtonType.google,
-                    onPressed: () {
-                      print('click');
-                    })),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 540, 20, 25),
+              child: Container(
+                  height: 70,
+                  width: double.infinity,
+                  padding: EdgeInsets.all(10),
+                  child: SignInButton(
+                      buttonType: ButtonType.google,
+                      onPressed: () {
+                        print('click');
+                      })),
+            ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 610, 20, 25),
-            child: Container(
-                height: 70,
-                width: double.infinity,
-                padding: const EdgeInsets.all(10),
-                child: SignInButton(
-                    buttonType: ButtonType.apple,
-                    onPressed: () {
-                      print('click');
-                    })),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20, 610, 20, 25),
+              child: Container(
+                  height: 70,
+                  width: double.infinity,
+                  padding: EdgeInsets.all(10),
+                  child: SignInButton(
+                      buttonType: ButtonType.apple,
+                      onPressed: () {
+                        print('click');
+                      })),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(
@@ -155,7 +165,7 @@ class WelcomeScreen extends BaseRoute {
             ),
             child: Row(
               children: [
-                const Text(
+                Text(
                   'Don\'t have an account ?',
                 ),
                 TextButton(

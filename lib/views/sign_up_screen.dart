@@ -70,7 +70,7 @@ class SignUpScreen extends BaseRoute {
             ),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Column(
                 children: [
                   Padding(
@@ -79,7 +79,7 @@ class SignUpScreen extends BaseRoute {
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
                         hintText: 'Enter your First Name',
-                        border: OutlineInputBorder(borderSide: const BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
+                        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
                       ),
                       validator: (value) {
                         if (value!.contains('@gmail.com') == false) {
@@ -107,7 +107,7 @@ class SignUpScreen extends BaseRoute {
             ),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Column(
                 children: [
                   Padding(
@@ -116,7 +116,7 @@ class SignUpScreen extends BaseRoute {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintText: 'Enter your last name',
-                        border: OutlineInputBorder(borderSide: const BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
+                        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
                       ),
                       validator: (value) {
                         if (value!.contains('@gmail.com') == false) {
@@ -144,7 +144,7 @@ class SignUpScreen extends BaseRoute {
             ),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Column(
                 children: [
                   Padding(
@@ -153,7 +153,7 @@ class SignUpScreen extends BaseRoute {
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintText: 'Enter your email address',
-                        border: OutlineInputBorder(borderSide: const BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
+                        border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white60), borderRadius: BorderRadius.circular(30)),
                       ),
                       validator: (value) {
                         if (value!.contains('@gmail.com') == false) {
@@ -167,6 +167,9 @@ class SignUpScreen extends BaseRoute {
               ),
             ),
              Container(
+              
+              // child: Padding(
+              //   padding: const EdgeInsets.fromLTRB(30, 0, 50, 50),
               padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.07 , top: MediaQuery.of(context).size.height * 0.66 , ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,

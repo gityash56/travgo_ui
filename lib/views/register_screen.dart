@@ -64,7 +64,7 @@ class RegisterScreen extends BaseRoute {
                     child: Container(
                       height: 70,
                       width: double.infinity,
-                      padding: const EdgeInsets.all(10),
+                      padding: EdgeInsets.all(10),
                       child: ElevatedButton(
                         onPressed: () {
                           // its work but we cant use.
@@ -85,7 +85,7 @@ class RegisterScreen extends BaseRoute {
                     padding: const EdgeInsets.only(left: 100),
                     child: Row(
                       children: [
-                        const Text(
+                        Text(
                           'Don\'t have an account ?',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
